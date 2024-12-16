@@ -1,10 +1,10 @@
-username = 'Имя пользователя'
+username = 'Игорь Горич'
 print('Имя пользователя:', username)
-title = 'заголовок заметки'
+title = 'Домашняя работа'
 print('заголовок заметки:', title)
-content = 'описание заметки'
+content = 'Выполнить решение работы'
 print('описание заметки:', content)
-status = 'статус заметки'
+status = 'В процессе'
 print('статус заметки:', status)
 created_date = '16-12-2024'
 print('16-12-2024:', created_date)
