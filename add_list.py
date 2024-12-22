@@ -1,6 +1,16 @@
-username = input('Напишите своё имя ')
-city = input('Напишите название города, в котором вы живёте ')
-street = input('Напишите название улицы, на которой вы проживаете ')
-house = input('Напишите номер вашего дома ')
-home_adress = [city, street, house]
-print(username, 'вы проживаете по адресу', *home_adress)
+username = input('Напишите имя ')
+title1 = input('Напишите подзаголовок заметки 1 ')
+title2 = input('Напишите подзаголовок заметки 2 ')
+title3 = input('Напишите подзаголовок заметки 3 ')
+title = [title1, title2, title3]
+content = input('Введите описание заметки ')
+status = input('Введите статус заметки ')
+created_date = input('Введите дату создания заметки в формате день-месяц-год ')
+issue_date = input('Введите дату истечения заметки в формате день-месяц-год ')
+
+print('Имя пользователя:', username)
+print('Заголовок заметки:', *title)
+print('Описание заметки:', content)
+print('Статус заметки:', status)
+print('Дата создания заметки:', created_date)
+print('Дата истечения заметки:', issue_date)

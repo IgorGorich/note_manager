@@ -1,5 +1,13 @@
-username = input('Напишите своё имя ')
-birthday = input('Напишите дату вашего рождения, день-месяц-год ')
-year = 2024
-age = year - int(birthday[6:])
-print(username, 'вам в этом году исполнилось', age, 'лет')
+username = input('Напишите имя ')
+title = input('Введите заголовок заметки ')
+content = input('Введите описание заметки ')
+status = input('Введите статус заметки ')
+created_date = input('Введите дату создания заметки в формате день-месяц-год ')
+issue_date = input('Введите дату истечения заметки в формате день-месяц-год ')
+
+print('Имя пользователя:', username)
+print('Заголовок заметки:', title)
+print('Описание заметки:', content)
+print('Статус заметки:', status)
+print('Дата создания заметки:', created_date)
+print('Дата истечения заметки:', issue_date)

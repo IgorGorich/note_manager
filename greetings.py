@@ -1,12 +1,12 @@
-username = 'Игорь Горич'
+username = 'Игорь'
 print('Имя пользователя:', username)
-title = 'Домашняя работа'
-print('заголовок заметки:', title)
-content = 'Выполнить решение работы'
-print('описание заметки:', content)
-status = 'В процессе'
-print('статус заметки:', status)
+title = 'заголовок заметки'
+print('Заголовок заметки:', title)
+content = 'описание заметки'
+print('Описание заметки:', content)
+status = 'статус заметки'
+print('Статус заметки:', status)
 created_date = '16-12-2024'
-print('Дата начала:', created_date)
+print('Дата создания заметки:', created_date)
 issue_date = '30-12-2024'
-print('Дата окончания:', issue_date)
+print('Дата истечения заметки:', issue_date)

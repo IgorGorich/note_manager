@@ -1,12 +1,19 @@
-print('Создадим карточку читателя библиотеки.')
-username = input('Имя читателя ')
-title = input('Наименование книги ')
-autor = input('Автор книги ')
-created_date = input('Дата начала чтения (день-месяц-год) ')
-issue_date = input('Дата возврата книги (день-месяц-год) ')
-card_book = [username, title, autor, created_date, issue_date]
-print(*card_book)
-cont_date = input('Дата продления (день-месяц-год) ')
-card_book.append(cont_date)
-card_book.remove(issue_date)
-print(*card_book, '- книга продлена')
+note = {}   #Создание словаря и последующее его наполнение
+note['username'] = input('Напишите имя ')
+title1 = input('Напишите подзаголовок заметки 1 ')
+title2 = input('Напишите подзаголовок заметки 2 ')
+title3 = input('Напишите подзаголовок заметки 3 ')
+title = [title1, title2, title3]    #Создание списка из подзаголовков
+note['title'] = title   #Добавление списка в словарь
+
+note['content'] = input('Введите описание заметки ')
+note['status'] = input('Введите статус заметки ')
+note['created_date'] = input('Введите дату создания заметки в формате день-месяц-год ')
+note['issue_date'] = input('Введите дату истечения заметки в формате день-месяц-год ')
+
+print('Имя пользователя' , note['username'])
+print('Заголовки заметки' , note['title'])
+print('Описание заметки' , note['content'])
+print('Статус заметки' , note['status'])
+print('Дата создания заметки' , note['created_date'])
+print('Дата истечения заметки' , note['issue_date'])
