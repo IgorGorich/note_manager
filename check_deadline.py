@@ -1,6 +1,6 @@
 from datetime import datetime
 
-print('Текущая дата:', datetime.today().strftime("%d-%m-%Y"))
+print('Текущая дата:', datetime.today().strftime("%d-%m-%Y"))  # Выводим сегодняшнюю дату
 while True:
     try:
         issue_date = input('Введите дату дедлайна в формате день-месяц-год ')  # Запрашиваем дату дедлайна
