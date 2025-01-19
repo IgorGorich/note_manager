@@ -38,13 +38,20 @@ while True:  # Начинаем цикл запросов по наполнен�
     print('Хотите добавить ещё одну заметку? (да/нет): ')  # Предлагаем пользователю создать ещё заметку
     while True:
         marker = input()
-        if marker == 'нет' or marker == 'да':
+        if marker.lower() == 'нет' or marker.lower() == 'да':
             break
         else:
             print('Вы ответили некорректно, напишите "да"/"нет"')
     note = {'username': username, 'title': title, 'content': content, 'status': status, 'created_date': created_date,
             'issue_date': issue_date}  # Создание словаря
     list_notes.append(note)  # Добавление словаря в список
-    if marker == 'нет':
+    if marker.lower() == 'нет':
         break
-print(*list_notes, sep='\n')  # Итоговый вывод списка словарей
+print('Ваш список заметок:')
+for i, item in enumerate(list_notes, start=1):  # Итоговый вывод списка словарей
+    print(f"{i}. Имя: {item['username']}")
+    print(f" Заголовок: {item['title']}")
+    print(f" Описание: {item['content']}")
+    print(f" Статус: {item['status']}")
+    print(f" Дата создания: {item['created_date']}")
+    print(f" Дата дедлайна: {item['issue_date']}")
