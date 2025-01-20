@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import datetime, timedelta
 
 
 def create_note():  # Создание функции по наполнению словаря из заметок
@@ -27,12 +27,14 @@ def create_note():  # Создание функции по наполнению 
             break
         else:  # Если значение отсутствует из предложенных, сообщаем об ошибке и просим повторить
             print('Вы неправильно выбрали статус, повторите')
-    created_date = date.today()  # Присвоение переменной created_date сегодняшней даты
-    issue_date = created_date + timedelta(days=7)  # Дедлайн через неделю от сегодняшней даты
+    created_date_1 = datetime.today()
+    created_date = created_date_1.strftime("%d-%m-%Y")  # Присвоение переменной created_date сегодняшней даты
+    issue_date_1 = created_date_1 + timedelta(days=7)
+    issue_date = issue_date_1.strftime("%d-%m-%Y")  # Дедлайн через неделю от сегодняшней даты
 
     note = {'username': username, 'title': title, 'content': content, 'status': status, 'created_date': created_date,
             'issue_date': issue_date}  # Наполнение словаря из полученных данных
-    print('Ваш список заметок:', note, sep='\n')
+    print('Заметка создана:', note, sep='\n')  # Вывод полученной заметки
 
 
 create_note()
