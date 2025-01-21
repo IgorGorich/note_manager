@@ -17,20 +17,20 @@ def create_note():  # Создание функции по наполнению 
     while True:  # Запускаем цикл по определению статуса заметки
         status_num = input()
         if status_num == '1':
-            status = ('Новая')
+            status = 'Новая'
             break
         elif status_num == '2':
-            status = ('В процессе')
+            status = 'В процессе'
             break
         elif status_num == '3':
-            status = ('Выполнено')
+            status = 'Выполнено'
             break
         else:  # Если значение отсутствует из предложенных, сообщаем об ошибке и просим повторить
             print('Вы неправильно выбрали статус, повторите')
-    created_date_1 = datetime.today()
-    created_date = created_date_1.strftime("%d-%m-%Y")  # Присвоение переменной created_date сегодняшней даты
-    issue_date_1 = created_date_1 + timedelta(days=7)
-    issue_date = issue_date_1.strftime("%d-%m-%Y")  # Дедлайн через неделю от сегодняшней даты
+    created_date_str = datetime.today()
+    created_date = created_date_str.strftime("%d-%m-%Y")  # Присвоение переменной created_date сегодняшней даты
+    issue_date_str = created_date_str + timedelta(days=7)
+    issue_date = issue_date_str.strftime("%d-%m-%Y")  # Дедлайн через неделю от сегодняшней даты
 
     note = {'username': username, 'title': title, 'content': content, 'status': status, 'created_date': created_date,
             'issue_date': issue_date}  # Наполнение словаря из полученных данных
