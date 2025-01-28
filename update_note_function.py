@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from create_note_function import create_note, note
 
 
-def update_note():
+def update_note():  # Создаём функцию по выбору и обновлению какой-либо заметки
     while True:
         print('Вы хотите обновить какое-либо поле заметки?')
         print('1. Имя', '2. Заголовок', '3. Описание', '4. Статус', '5. Дата дедлайна', sep='\n')
