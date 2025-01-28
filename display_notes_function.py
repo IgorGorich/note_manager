@@ -1,17 +1,15 @@
 from datetime import datetime, timedelta
 
-
 list_notes = []
 note = {}
 
+
 def display_notes():  # Создание функции
-    while True:
-        while True:  # Запускаем ввод имени и его проверку на пустую запись
-            username = input('Напишите имя пользователя: ')
-            if username == "" or username == " ":
-                print('Вы не написали имя, повторите!')
-            else:
-                break
+    while True:  # Запускаем цикл по наполнению списка заметок
+        username = input('Напишите имя пользователя: ')
+        if username == "" or username == " ":
+            print('У вас нет сохранённых заметок.')
+            break
         title = input('Введите заголовок заметки: ')
         content = input('Введите описание заметки: ')
         print('Выберите статус заметки, нажав соответствующую цифру:', '1. Новая', '2. В процессе', '3. Выполнено',
@@ -33,9 +31,6 @@ def display_notes():  # Создание функции
         created_date = created_date_str.strftime("%d-%m-%Y")  # Дата создания = сегодняшняя дата
         issue_date_str = created_date_str + timedelta(days=7)
         issue_date = issue_date_str.strftime("%d-%m-%Y")  # Дедлайн через неделю от сегодняшней даты
-        # print('Ваша заметка содержит:')
-        # for i in note:
-        #     print(*note[i])
         print('Хотите добавить ещё одну заметку? (да/нет): ')  # Предлагаем пользователю создать ещё заметку
         while True:
             marker = input()
@@ -50,7 +45,7 @@ def display_notes():  # Создание функции
         list_notes.append(note)  # Добавление словаря в список
         if marker.lower() == 'нет':
             break
-    print('Ваш список заметок:')
+    print('Список заметок:')
     for i, item in enumerate(list_notes, start=1):  # Итоговый вывод списка словарей
         print(f"Заметка №{i}.")
         print(f" Имя: {item['username']}")
