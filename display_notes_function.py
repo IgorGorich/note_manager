@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
 list_notes = []
 note = {}
@@ -8,9 +8,9 @@ def display_notes():  # Создание функции
     while True:  # Запускаем цикл по наполнению списка заметок
         username = input('Напишите имя пользователя: ')
         title = input('Введите заголовок заметки: ')
-        content = input('Введите описание заметки: ')
-        if username == '' and title == '' and content == '':  # Если имя, заголовок и описание пустые, прекращаем
+        if username == '' and title == '':  # Если имя и заголовок пустые, прекращаем
             break
+        content = input('Введите описание заметки: ')
         print('Выберите статус заметки, нажав соответствующую цифру:', '1. Новая', '2. В процессе', '3. Выполнено',
               sep='\n')
         while True:  # Запускаем цикл по определению статуса заметки
@@ -57,6 +57,7 @@ def display_notes():  # Создание функции
         print('У вас нет сохранённых заметок.')
     else:
         print('Список заметок:')
+        print('--------------------------')
         for i, item in enumerate(list_notes, start=1):  # Итоговый вывод списка словарей
             print(f"Заметка №{i}.")
             print(f" Имя: {item['username']}")
